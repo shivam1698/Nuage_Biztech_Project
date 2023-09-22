@@ -1,0 +1,371 @@
+<main class="main">
+  <section class="home-slider position-relative mb-30">
+    <div class="container">
+      <div class="home-slide-cover mt-30">
+
+        <ngb-carousel *ngIf="popularProducts">
+          <ng-template *ngFor="let item of popularProducts" ngbSlide>
+
+            <div class="hero-slider-1 style-4 dot-style-1 dot-style-1-position-1">
+              <div class="single-hero-slider single-animation-wrap"
+                style="background-image: url(assets/imgs/slider/slider-11.jpg)">
+                <div class="slider-content">
+                </div>
+                <div class="carousel-caption">
+                  <h3>An MI Product</h3>
+                  <p>MI TV is definitely a good option to buy</p>
+                </div>
+              </div>
+            </div>
+
+          </ng-template>
+
+        </ngb-carousel>
+      </div>
+    </div>
+  </section>
+  <!--End hero slider-->
+  <section class="product-tabs section-padding position-relative">
+    <div class="container">
+      <div class="section-title style-2 wow animate__animated animate__fadeIn">
+        <h3>Popular Products</h3>
+      </div>
+      <!--End nav-tabs-->
+      <div class="tab-content new-slider" id="myTabContent">
+        <div class="tab-pane fade show active" id="tab-one" role="tabpanel" aria-labelledby="tab-one">
+          <div class="row product-grid-4">
+            <ngb-carousel>
+              <ng-template ngbSlide>
+                <div class="carousel-container">
+                  <div class="row">
+                    <div class="col-lg-1-5 col-md-4 col-12 col-sm-6" *ngFor="let item of gridList" >
+                      <div class="product-cart-wrap mb-30 wow animate__animated animate__fadeIn" data-wow-delay=".1s">
+                        <div class="product-img-action-wrap">
+                          <div class="product-img product-img-zoom">
+                            <a href="#">
+                              <img class="default-img" src="{{item.image_url}}" alt="" />
+                            </a>
+                          </div>
+                          <div class="product-action-1">
+                            <a aria-label="Add To Wishlist" class="action-btn" href="#"><i
+                                class="fi-rs-heart"></i></a>
+                            <a aria-label="Compare" class="action-btn" href="#"><i
+                                class="fi-rs-shuffle"></i></a>
+                            <a aria-label="Quick view" class="action-btn" data-bs-toggle="modal"
+                              data-bs-target="#quickViewModal"><i class="fi-rs-eye"></i></a>
+                          </div>
+                        </div>
+                        <div class="product-content-wrap">
+                          <p>&nbsp;</p>
+                          <h2><a href="#">{{item.name}}</a></h2>
+                          <div class="product-rate-cover">
+                            <div class="product-rate d-inline-block">
+                              <div class="product-rating" style="width: 90%"></div>
+                            </div>
+                            <span class="font-small ml-5 text-muted"> (4.0)</span>
+                          </div>
+                          <div>
+                            <span class="font-small text-muted">By <a href="#">TVs-Store</a></span>
+                          </div>
+                          <div class="product-card-bottom">
+                            <div class="product-price">
+                              <span>{{item.offer_price}}</span>
+                              <span class="old-price">{{item.actual_price}}</span>
+                            </div>
+                            <div class="add-cart">
+                            <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </ng-template>
+            </ngb-carousel>
+
+            <!--end product card-->
+          </div>
+          <!--End product-grid-4-->
+        </div>
+        <!--En tab one-->
+      </div>
+      <!--End tab-content-->
+    </div>
+  </section>
+  <!--Products Tabs-->
+  <section class="popular-categories section-padding">
+    <div class="container wow animate__animated animate__fadeIn">
+      <div class="section-title">
+        <div class="title">
+          <h3>Featured Categories</h3>
+        </div>
+      </div>
+      <div class="carausel-10-columns-cover position-relative">
+        <div class="carausel-10-columns" id="carausel-10-columns" style="display: flex;">
+          <div class="card-2 bg-9 wow animate__animated animate__fadeInUp" data-wow-delay=".1s" style="width: 140px;">
+            <figure class="img-hover-scale overflow-hidden">
+              <a href="shop-grid-right.html"><img src="assets/imgs/shop/cat-16.png" alt="" /></a>
+            </figure>
+            <h6><a href="shop-grid-right.html">Mi TVs</a></h6>
+            <span>26 items</span>
+          </div>
+          <div class="card-2 bg-10 wow animate__animated animate__fadeInUp" data-wow-delay=".2s" style="width: 140px;">
+            <figure class="img-hover-scale overflow-hidden">
+              <a href="shop-grid-right.html"><img src="assets/imgs/shop/cat-17.jpeg" alt="" /></a>
+            </figure>
+            <h6><a href="shop-grid-right.html">Sony TVs</a></h6>
+            <span>28 items</span>
+          </div>
+          <div class="card-2 bg-11 wow animate__animated animate__fadeInUp" data-wow-delay=".3s" style="width: 140px;">
+            <figure class="img-hover-scale overflow-hidden">
+              <a href="shop-grid-right.html"><img src="assets/imgs/shop/cat-18.jpeg" alt="" /></a>
+            </figure>
+            <h6><a href="shop-grid-right.html">Samsung TVs</a></h6>
+            <span>14 items</span>
+          </div>
+          <div class="card-2 bg-12 wow animate__animated animate__fadeInUp" data-wow-delay=".4s" style="width: 140px;">
+            <figure class="img-hover-scale overflow-hidden">
+              <a href="shop-grid-right.html"><img src="assets/imgs/shop/cat-19.png" alt="" /></a>
+            </figure>
+            <h6><a href="shop-grid-right.html">Apple TVs</a></h6>
+            <span>54 items</span>
+          </div>
+          <div class="card-2 bg-13 wow animate__animated animate__fadeInUp" data-wow-delay=".5s" style="width: 140px;">
+            <figure class="img-hover-scale overflow-hidden">
+              <a href="shop-grid-right.html"><img src="assets/imgs/shop/cat-20.png" alt="" /></a>
+            </figure>
+            <h6><a href="shop-grid-right.html">Oneplus TVs</a></h6>
+            <span>56 items</span>
+          </div>
+          <div class="card-2 bg-14 wow animate__animated animate__fadeInUp" data-wow-delay=".6s" style="width: 140px;">
+            <figure class="img-hover-scale overflow-hidden">
+              <a href="shop-grid-right.html"><img src="assets/imgs/shop/cat-21.jpeg" alt="" /></a>
+            </figure>
+            <h6><a href="shop-grid-right.html">INTEX TVs</a></h6>
+            <span>72 items</span>
+          </div>
+          <div class="card-2 bg-15 wow animate__animated animate__fadeInUp" data-wow-delay=".7s" style="width: 140px;">
+            <figure class="img-hover-scale overflow-hidden">
+              <a href="shop-grid-right.html"><img src="assets/imgs/shop/cat-18.jpeg" alt="" /></a>
+            </figure>
+            <h6><a href="shop-grid-right.html">Panasonic TVs</a></h6>
+            <span>36 items</span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--End category slider-->
+
+  <!--End banners-->
+  <section class="section-padding pb-5">
+    <div class="container">
+      <div class="section-title wow animate__animated animate__fadeIn" data-wow-delay="0">
+        <h3 class="">Deals Of The Day</h3>
+        <a class="show-all" href="shop-grid-right.html">
+          All Deals
+          <i class="fi-rs-angle-right"></i>
+        </a>
+      </div>
+      <div class="row">
+        <div class="col-xl-3 col-lg-4 col-md-6">
+          <div class="product-cart-wrap style-2 wow animate__animated animate__fadeInUp" data-wow-delay="0">
+            <div class="product-img-action-wrap">
+              <div class="product-img">
+                <a href="#">
+                  <img src="assets/imgs/banner/banner-23.jpeg" alt="" />
+                </a>
+              </div>
+            </div>
+            <div class="product-content-wrap">
+              <div class="deals-countdown-wrap">
+                <div class="deals-countdown" data-countdown="2025/03/25 00:00:00"></div>
+              </div>
+              <div class="deals-content">
+                <h2><a href="#">Upto FHD Display
+                    Premium Metal Bezel-less
+                    Vivid Picture Engine
+                    Up to 24W Dolby Audio</a></h2>
+                <div class="product-rate-cover">
+                  <div class="product-rate d-inline-block">
+                    <div class="product-rating" style="width: 90%"></div>
+                  </div>
+                  <span class="font-small ml-5 text-muted"> (4.0)</span>
+                </div>
+                <div>
+                  <span class="font-small text-muted">By <a href="vendor-details-1.html">MI-Product</a></span>
+                </div>
+                <div class="product-card-bottom">
+                  <div class="product-price">
+                    <span>$32.85</span>
+                    <span class="old-price">$33.8</span>
+                  </div>
+                  <div class="add-cart">
+                    <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-6">
+          <div class="product-cart-wrap style-2 wow animate__animated animate__fadeInUp" data-wow-delay=".1s">
+            <div class="product-img-action-wrap">
+              <div class="product-img">
+                <a href="#">
+                  <img src="assets/imgs/banner/banner-22.jpeg" alt="" />
+                </a>
+              </div>
+            </div>
+            <div class="product-content-wrap">
+              <div class="deals-countdown-wrap">
+                <div class="deals-countdown" data-countdown="2026/04/25 00:00:00"></div>
+              </div>
+              <div class="deals-content">
+                <h2><a href="#">Offered in 55-inch and 65-inch display sizes, the Bravia XR Master Series A95L OLED TV
+                    boasts Sony Cognitive Processor XR,</a></h2>
+                <div class="product-rate-cover">
+                  <div class="product-rate d-inline-block">
+                    <div class="product-rating" style="width: 90%"></div>
+                  </div>
+                  <span class="font-small ml-5 text-muted"> (4.0)</span>
+                </div>
+                <div>
+                  <span class="font-small text-muted">By <a href="vendor-details-1.html">SONY-Product</a></span>
+                </div>
+                <div class="product-card-bottom">
+                  <div class="product-price">
+                    <span>$24.85</span>
+                    <span class="old-price">$26.8</span>
+                  </div>
+                  <div class="add-cart">
+                    <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-6 d-none d-lg-block">
+          <div class="product-cart-wrap style-2 wow animate__animated animate__fadeInUp" data-wow-delay=".2s">
+            <div class="product-img-action-wrap">
+              <div class="product-img">
+                <a href="#">
+                  <img src="assets/imgs/banner/banner-23.jpeg" alt="" />
+                </a>
+              </div>
+            </div>
+            <div class="product-content-wrap">
+              <div class="deals-countdown-wrap">
+                <div class="deals-countdown" data-countdown="2027/03/25 00:00:00"></div>
+              </div>
+              <div class="deals-content">
+                <h2><a href="#">LG LED Smart TV 32 inch LM630B Series HD HDR Smart LED TV.
+                  </a></h2>
+                <div class="product-rate-cover">
+                  <div class="product-rate d-inline-block">
+                    <div class="product-rating" style="width: 80%"></div>
+                  </div>
+                  <span class="font-small ml-5 text-muted"> (3.0)</span>
+                </div>
+                <div>
+                  <span class="font-small text-muted">By <a href="vendor-details-1.html">LG-Product</a></span>
+                </div>
+                <div class="product-card-bottom">
+                  <div class="product-price">
+                    <span>$12.85</span>
+                    <span class="old-price">$13.8</span>
+                  </div>
+                  <div class="add-cart">
+                    <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-6 d-none d-xl-block">
+          <div class="product-cart-wrap style-2 wow animate__animated animate__fadeInUp" data-wow-delay=".3s">
+            <div class="product-img-action-wrap">
+              <div class="product-img">
+                <a href="#">
+                  <img src="assets/imgs/banner/banner-22.jpeg" alt="" />
+                </a>
+              </div>
+            </div>
+            <div class="product-content-wrap">
+              <div class="deals-countdown-wrap">
+                <div class="deals-countdown" data-countdown="2025/02/25 00:00:00"></div>
+              </div>
+              <div class="deals-content">
+                <h2><a href="#">SAMSUNG 80 cm (32 inch) HD Ready LED Smart Tizen TV with SMART TV TIZEN HD Online at
+                    best Prices In India. Use it to save on your next order.</a></h2>
+                <div class="product-rate-cover">
+                  <div class="product-rate d-inline-block">
+                    <div class="product-rating" style="width: 80%"></div>
+                  </div>
+                  <span class="font-small ml-5 text-muted"> (3.0)</span>
+                </div>
+                <div>
+                  <span class="font-small text-muted">By <a href="vendor-details-1.html">SAMSUNG-Product</a></span>
+                </div>
+                <div class="product-card-bottom">
+                  <div class="product-price">
+                    <span>$15.85</span>
+                    <span class="old-price">$16.8</span>
+                  </div>
+                  <div class="add-cart">
+                    <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--End Deals-->
+</main>
+
+<!-- Shivam -->
+<!-- <ngb-carousel >
+  <ng-template *ngFor="let item of popularProducts" ngbSlide>
+    <div class="picsum-img-wrapper">
+      <a routerLink="/details/{{item.id}}"><img class="product-header-img" src="{{item.image}}"
+          alt="Random first slide" />
+      </a>
+    </div>
+    <div class="carousel-caption">
+      <h3>{{item.name}}</h3>
+      <p>{{item.description}}</p>
+    </div>
+  </ng-template>
+</ngb-carousel> -->
+<!-- <div class="product-list-wrapper">
+  <h1>Trendy TVs</h1>
+  <div class="row">
+    <div class="col-sm-3" *ngFor="let item of gridList">
+      <div class="product-item">
+        <img src="{{item.image_url}}" alt="">
+
+        <div class="product-details">
+          <h6 class="name-head">{{item.name}} </h6>
+          <div class="product-price">
+            <h6>{{item.offer_price}}</h6>
+          </div>
+          <div class="product-color">
+            <h6>{{item.brand}}</h6>
+          </div>
+        </div>
+        <div class="product-footer">
+          <a routerLink="/details/{{item.id}}">View Details</a>
+          <a href="">Add To Cart</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+<!-- Shivam -->

@@ -1,0 +1,28 @@
+.footer {
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.footer .footer-text {
+  margin-bottom: 0;
+}
+
+.footer .footer-links {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.footer .footer-links li {
+  margin-right: 10px;
+}
+
+.footer .footer-links li:last-child {
+  margin-right: 0;
+}
+
+.footer .footer-links li a {
+  text-decoration: none;
+  color: #333;
+}
